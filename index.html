@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>The Impossible Quiz</title>
+
+   <link rel="stylesheet" href="./assests/style.css" />
+ 
+</head>
+
+<body>
+    <div class="scores"> <a href="highscores.html"> ScoreBoard</a> </div>
+    <div class="timer">Time: <span id="time"> 0</span> </div>
+
+    <div class="wrapper">
+        <div id="start-screen" class="start">   
+            <h1> The Impossible Quiz</h1>
+            <p> Try to answer the following questions to the best of your ability.
+                If you answer a question incorrectly. 10 seconds will be deducted from the timer.
+             </p>
+
+             <button id="start">Good Luck</button>
+        </div>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title"> </h2> 
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen" class="hide">
+            <h2> FINISH!</h2>
+            <p>Your score is...<span id="final-score"> </span>. </p>
+        
+             <p>
+            Go down in History: <input type="text" id="initials" max="20"/>
+            <button id="submit"> Submit </button>
+            </p>
+        </div>
+        
+        <div id="feedback" class="feedback hide"></div>
+   
+    </div>
+    
+    <script src="./assests/questions.js"></script>
+    <script src="assests/script.js"></script>
+
+
+
+</body>
+
+
+</html>
+
