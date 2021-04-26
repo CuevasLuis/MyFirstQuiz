@@ -3,6 +3,9 @@ body {
     font-size: 120%;
   }
 
+.HS{
+  text-align: center;
+}
 
   .timer {
     position: absolute;

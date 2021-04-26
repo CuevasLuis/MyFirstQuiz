@@ -4,7 +4,41 @@ a {
     text-decoration: none;
     transition: color 0.1s;
   }
+  .home{
+      position: absolute;
+      top:10px;
+      right:10px;
 
+  }
+  h1{
+      text-align: center;
+      font-family: fantasy;
+  }
+
+  .container2{
+      font-family: fantasy;
+      display: block;
+    width: 100%;
+    border: none;
+    padding: 15px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    }
+
+    /* .yes{
+        font-family: fantasy;
+    
+        width: 100%;
+        border: none;
+        padding: 15px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        }
+      */
+    
+ 
 
   .timer {
       color: white;
@@ -12,13 +46,23 @@ a {
     font-size: 25px;
     position:absolute;
     bottom: 0px;
-    
     right:10px;
    
   }
 
+
+  .feedback {
+    font-family: fantasy;
+    font-size: 120%;
+    margin-top: 20px;
+    padding-top: 10px;
+    color: gray;
+    border-top: 2px solid #ccc;
+  }
+
   .start {
     text-align: center;
+    font-family: fantasy;
   }
 
   .choices button {

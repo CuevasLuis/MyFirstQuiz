@@ -1,56 +1,27 @@
-
-var questions = [
-    {
-    title:"What is the closest planet to the sun in our solar System?",
-    choices: ["Pluto","Mars","Mercury","Earth",],
-    answer: "Mercury"
-    },
-
-    {
-   title: "What was Marilyn Monroe's natural hair color",
-    choices:["brown ","red","blonde","white"],
-    answer: "red"
-
-
-    },  
-
-    {
-        title:"Where were the fortune cookies invented?",
-        choices: ["Toykyo","San Francisco","Houston","Mexico City"],
-        answer: "San Francisco"
-    },
-
-    {
-        title: "If you were born five years ago. how old are you right now?",
-        choices: ["five", "twenty-one", "seven", "ten"],
-        answer: "five"
-      },
-
-
-      { 
-        title: "How many feet in an inch",
-        choices: ["zero", "twelve", "two", "one"],
-        answer: "zero"
-      },
-
-
-      {
-        title: "Which one is not a continent",
-        choices: ["Mexico", "Africa", "Australia", "Europe"],
-        answer: "Mexico"
+function printHighscores() {
+  
+    var highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+  
+    highscores.sort(function(a, b) {
+      return b.score - a.score;
+    });
+  
+    highscores.forEach(function(score) {
       
-      },
-
-      {
-          title: "what is a Haboob?",
-          choices : ["Tsunami","Hurricane","SandStorm","Earthquake",],
-          answer: "SandStorm"
-
-
-
-      },
-
-];
-
-
+      var liTag = document.createElement("li");
+      liTag.textContent = score.initials + " - " + score.score;
+  
+      var olEl = document.getElementById("highscores");
+      olEl.appendChild(liTag);
+    });
+  }
+  function clearHighscores() {
+    window.localStorage.removeItem("highscores");
+    window.location.reload();
+  }
+  
+  document.getElementById("clear").onclick = clearHighscores;
+  
+  printHighscores();
+  
 

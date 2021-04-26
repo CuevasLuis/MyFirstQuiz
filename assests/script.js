@@ -1,4 +1,4 @@
-1
+
 var currentQuestionIndex = 0;
 var time = questions.length * 15;
 var timerId;
@@ -11,6 +11,7 @@ var initialsEl = document.getElementById("initials");
 var feedbackEl = document.getElementById("feedback");
 var sfxRight = new Audio("assets/sfx/correct.wav");
 var sfxWrong = new Audio("assets/sfx/incorrect.wav");
+
 function startQuiz() {
   var startScreenEl = document.getElementById("start-screen");
   startScreenEl.setAttribute("class", "hide");
