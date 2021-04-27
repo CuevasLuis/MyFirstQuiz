@@ -11,11 +11,16 @@ var initialsEl = document.getElementById("name");
 var feedbackEl = document.getElementById("feedback");
 
 
+
+
+
+
+
 function startQuiz() {
     var startScreenEl = document.getElementById("start-screen");
     startScreenEl.setAttribute("class", "hide");
     questionsEl.removeAttribute("class");
-    timerId = setInterval(clockTick, 1000);
+    timerId = setInterval(clockTick, 100);
     timerEl.textContent = time;
     getQuestion();
   }
@@ -40,11 +45,11 @@ function startQuiz() {
         time = 0;
       }
       timerEl.textContent = time;
-    //   sfxWrong.play();
-    //   feedbackEl.textContent = "Wrong!";
-    // } else {
-    //   sfxRight.play();
-    //   feedbackEl.textContent = "Correct!";
+    
+      feedbackEl.textContent = "Whooops!";
+    } else {
+    
+      feedbackEl.textContent = "Correct!";
     }
     feedbackEl.setAttribute("class", "feedback");
     setTimeout(function() {
